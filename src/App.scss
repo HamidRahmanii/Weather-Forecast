@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+}
+
+.today {
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+
+  .search-input {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+
+    .input {
+      background-color: green;
+      width: 100%;
+    }
+
+    .search {
+      background-color: yellow;
+    }
+  }
+
+  .now {
+    min-height: 30vh;
+
+    display: flex;
+    flex-direction: row;
+
+    .now-text {
+      width: 60%;
+      background-color: blue;
+      display: flex;
+      flex-direction: column;
+
+      .city-region {
+        background-color: aqua;
+        min-height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .city-conditions {
+        background-color: rgb(1, 133, 133);
+        min-height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .now-icon {
+      background-color: red;
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .today-forecast {
+    background-color: cornflowerblue;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .today-6am {
+      background-color: bisque;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .today-9am {
+      background-color: bisque;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .today-12pm {
+      background-color: bisque;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .today-3pm {
+      background-color: bisque;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .today-6pm {
+      background-color: bisque;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .today-9pm {
+      background-color: bisque;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .air-conditions {
+    background-color: gold;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.this-week {
+  width: 35vw;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .tonight-forecast {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .tomorrow-forecast {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .tomorrow1-forecast {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .tomorrow2-forecast {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .tomorrow3-forecast {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
