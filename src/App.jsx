@@ -74,22 +74,32 @@ function App() {
         </div>
 
         <div className="today-forecast">
-          {data.forecast?.forecastday?.[0]?.hour
-            .filter((_, index) => index >= 7 && (index - 7) % 3 === 0)
-            .map((hour) => (
-              // console.log(hour);
-              <div className="today-forecast-children">
-                <h4>{getTime(hour.time)} </h4>
-                <img src={hour.condition.icon} />
-                <h4>{Math.round(hour.temp_c)}°C</h4>
-              </div>
-            ))}
+          <div className="today-forecast-title">
+            <h2>TODAY'S FORECAST</h2>
+          </div>
+          <div className="today-forecast-details">
+            {data.forecast?.forecastday?.[0]?.hour
+              .filter((_, index) => index >= 7 && (index - 7) % 3 === 0)
+              .map((hour) => (
+                // console.log(hour);
+                <div className="today-forecast-children">
+                  <h4>{getTime(hour.time)} </h4>
+                  <img src={hour.condition.icon} />
+                  <h4>{Math.round(hour.temp_c)}°C</h4>
+                </div>
+              ))}
+          </div>
         </div>
         <div className="air-conditions">
-          <h3>Real Feel: {Math.round(data.current?.feelslike_c)}°C</h3>
-          <h3>Humidity: {Math.round(data.current?.humidity)}%</h3>
-          <h3>Pressure: {data.current?.pressure_mb} mbar</h3>
-          <h3>Wind: {data.current?.wind_kph} km/h</h3>
+          <div className="air-conditions-title">
+            <h2>AIR CONDITIONS</h2>
+          </div>
+          <div className="air-conditions-details">
+            <h3>Real Feel: {Math.round(data.current?.feelslike_c)}°C</h3>
+            <h3>Humidity: {Math.round(data.current?.humidity)}%</h3>
+            <h3>Pressure: {data.current?.pressure_mb} mbar</h3>
+            <h3>Wind: {data.current?.wind_kph} km/h</h3>
+          </div>
         </div>
       </div>
 

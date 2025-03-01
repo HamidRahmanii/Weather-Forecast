@@ -70,34 +70,53 @@
   }
 
   .today-forecast {
-    background-color: cornflowerblue;
+    background-color: rgb(195, 215, 255);
     min-height: 30vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-    .today-forecast-children {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
+    .today-forecast-title {
+      font-size: 10px;
+      color: black;
     }
 
+    .today-forecast-details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .today-forecast-children {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // gap: 1.5rem;
+      }
+    }
   }
 
   .air-conditions {
-    background-color: gold;
+    background-color: rgb(180, 205, 255);
     min-height: 30vh;
-    display: grid;
-    grid-template-areas:
-      "a b"
-      "c d";
-    // justify-content: center;
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .air-conditions-title {
+      font-size: 10px;
+      color: black;
+    }
+
+    .air-conditions-details {
+      display: grid;
+      grid-template-areas:
+        "a b"
+        "c d";
+      justify-items: center;
+      align-items: center;
+      gap: 3rem 0rem;
+    }
   }
 }
 
