@@ -77,7 +77,8 @@ function App() {
           {data.forecast?.forecastday?.[0]?.hour
             .filter((_, index) => index >= 7 && (index - 7) % 3 === 0)
             .map((hour) => (
-              <div key={index} className="today-6am">
+              // console.log(hour);
+              <div className="today-forecast-children">
                 <h4>{getTime(hour.time)} </h4>
                 <img src={hour.condition.icon} />
                 <h4>{Math.round(hour.temp_c)}°C</h4>
@@ -102,7 +103,7 @@ function App() {
             index === 0 ? "Today" : index === 1 ? "Tomorrow" : dayName;
 
           return (
-            <div key={index} className="tonight-forecast">
+            <div key={index} className="week-forecast-children">
               <h3>{modifiedName}</h3>
               <img src={item.day.condition.icon} />
               <h3>{item.day.condition.text}</h3>

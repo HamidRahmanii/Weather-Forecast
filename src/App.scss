@@ -40,12 +40,14 @@
       display: flex;
       flex-direction: column;
 
+
       .city-region {
         background-color: aqua;
         min-height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 0.5rem;
       }
 
       .city-conditions {
@@ -54,6 +56,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 0.3rem;
       }
     }
 
@@ -74,67 +77,27 @@
     justify-content: space-around;
     align-items: center;
 
-    .today-6am {
-      background-color: bisque;
-      min-height: 100%;
+    .today-forecast-children {
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
-    .today-9am {
-      background-color: bisque;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .today-12pm {
-      background-color: bisque;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .today-3pm {
-      background-color: bisque;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .today-6pm {
-      background-color: bisque;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .today-9pm {
-      background-color: bisque;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
   }
 
   .air-conditions {
     background-color: gold;
     min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "c d";
+    // justify-content: center;
+    justify-items: center;
+    align-items: center;
   }
 }
 
@@ -143,45 +106,13 @@
   background-color: brown;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 
-  .tonight-forecast {
-    min-height: 15vh;
-    display: flex;
-    flex-direction: row;
+  .week-forecast-children {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    justify-content: space-around;
+    justify-items: center;
   }
 
-  .tomorrow-forecast {
-    min-height: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .tomorrow1-forecast {
-    min-height: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .tomorrow2-forecast {
-    min-height: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .tomorrow3-forecast {
-    min-height: 15vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
 }
