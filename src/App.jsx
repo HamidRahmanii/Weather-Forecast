@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { fetchAPI } from "./utility/api";
 import "./App.scss";
 import { getTime } from "./utility/date";
+import TodayForecast from "./components/TodayForecast";
 
 function App() {
   const [data, setData] = useState({});
+  const [city, setCity] = useState("qom");
+  const inputRef = useRef(null);
 
   const getCityWeather = (city) => {
     fetchAPI
@@ -19,10 +22,17 @@ function App() {
       })
       .then((res) => {
         setData(res.data);
+        inputRef.current.value = "";
       })
       .catch((err) => {
         console.log("error", err);
       });
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const city = inputRef.current.value;
+    getCityWeather(city);
   };
 
   const days = [
@@ -37,21 +47,31 @@ function App() {
   console.log("data", data);
 
   useEffect(() => {
-    getCityWeather("qom");
+    getCityWeather(city);
   }, []);
 
   return (
     <div className="app">
       <div className="today">
-        <div className="search-input">
-          <input className="input" type="text" />
-          <button className="search">search</button>
-        </div>
+        <form action="" onSubmit={handleSearch}>
+          <div className="search-input">
+            <input
+              className="input"
+              type="text"
+              ref={inputRef}
+              // value={city}
+              // onChange={(e) => setCity(e.target.value)}
+            />
+            <button className="search" type="submit">
+              search
+            </button>
+          </div>
+        </form>
         <div className="now">
           <div className="now-text">
             <div className="city-region">
-              <h2>City: {data.location?.name}</h2>
-              <h2>Country: {data.location?.country}</h2>
+              <h2>{data.location?.name}</h2>
+              <h3>{data.location?.country}</h3>
             </div>
             <div className="city-conditions">
               <h3>
@@ -61,9 +81,11 @@ function App() {
                 )}
                 %
               </h3>
-              <h3>Condition: {data.current?.condition.text}</h3>
-              <h3>Temperature: {Math.round(data.current?.temp_c)}°C</h3>
+              <h3>{data.current?.condition.text}</h3>
             </div>
+          </div>{" "}
+          <div className="temperature">
+            <h3>{Math.round(data.current?.temp_c)}°C</h3>
           </div>
           <div className="now-icon">
             <img
@@ -73,23 +95,8 @@ function App() {
           </div>
         </div>
 
-        <div className="today-forecast">
-          <div className="today-forecast-title">
-            <h2>TODAY'S FORECAST</h2>
-          </div>
-          <div className="today-forecast-details">
-            {data.forecast?.forecastday?.[0]?.hour
-              .filter((_, index) => index >= 7 && (index - 7) % 3 === 0)
-              .map((hour) => (
-                // console.log(hour);
-                <div className="today-forecast-children">
-                  <h4>{getTime(hour.time)} </h4>
-                  <img src={hour.condition.icon} />
-                  <h4>{Math.round(hour.temp_c)}°C</h4>
-                </div>
-              ))}
-          </div>
-        </div>
+        <TodayForecast todayHour={data?.forecast?.forecastday?.[0]?.hour} />
+
         <div className="air-conditions">
           <div className="air-conditions-title">
             <h2>AIR CONDITIONS</h2>
@@ -104,23 +111,29 @@ function App() {
       </div>
 
       <div className="this-week">
-        {data.forecast?.forecastday?.map((item, index) => {
-          const dayOfWeek = new Date(item.date).getDay();
+        <div className="this-week-title">
+          {" "}
+          <h2>7-DAY FORECAST</h2>
+        </div>
+        <div className="this-week-details">
+          {data.forecast?.forecastday?.map((item, index) => {
+            const dayOfWeek = new Date(item.date).getDay();
 
-          const dayName = days[dayOfWeek];
+            const dayName = days[dayOfWeek];
 
-          const modifiedName =
-            index === 0 ? "Today" : index === 1 ? "Tomorrow" : dayName;
+            const modifiedName =
+              index === 0 ? "Today" : index === 1 ? "Tomorrow" : dayName;
 
-          return (
-            <div key={index} className="week-forecast-children">
-              <h3>{modifiedName}</h3>
-              <img src={item.day.condition.icon} />
-              <h3>{item.day.condition.text}</h3>
-              <h3>{item.day.avgtemp_c}°C</h3>
-            </div>
-          );
-        })}
+            return (
+              <div key={index} className="week-forecast-children">
+                <h2>{modifiedName}</h2>
+                <img src={item.day.condition.icon} />
+                <h3>{item.day.condition.text}</h3>
+                <h2>{Math.round(item.day.avgtemp_c)}°C</h2>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
