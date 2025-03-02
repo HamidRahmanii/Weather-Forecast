@@ -6,6 +6,7 @@
 
 .app {
   display: flex;
+  background-color: black;
 }
 
 .today {
@@ -14,13 +15,18 @@
   flex-direction: column;
 
   .search-input {
-    min-height: 10vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
+    margin: 5vh 2.5vw 0vh;
 
     .input {
-      background-color: green;
+      background-color: #232C3D;
+      outline: none;
+      border: none;
       width: 100%;
+      padding: 1rem;
+      color: #F2F4FC;
     }
 
     .search {
@@ -29,56 +35,83 @@
   }
 
   .now {
-    min-height: 30vh;
-
+    // background-color: #232C3D;
+    color: #596476;
+    height: 23vh;
     display: flex;
     flex-direction: row;
+    margin: 5vh 2.5vw 0vh;
 
     .now-text {
-      width: 60%;
-      background-color: blue;
+      width: 35%;
       display: flex;
       flex-direction: column;
 
 
       .city-region {
-        background-color: aqua;
-        min-height: 50%;
+        height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 0.5rem;
+
+        h2 {
+          font-size: 50px;
+          color: #F2F4FC;
+
+        }
+
+        h3 {
+          font-size: 25px;
+        }
       }
 
       .city-conditions {
-        background-color: rgb(1, 133, 133);
-        min-height: 50%;
+        height: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 0.3rem;
+
+        h3 {
+          font-size: 15px;
+        }
       }
     }
 
-    .now-icon {
-      background-color: red;
-      width: 40%;
+    .temperature {
+      width: 30%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 80px;
+      color: #F2F4FC;
+    }
+
+    .now-icon {
+      width: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 200px;
+      }
     }
   }
 
   .today-forecast {
-    background-color: rgb(195, 215, 255);
-    min-height: 30vh;
+    background-color: #232C3D;
+    color: #596476;
+    height: 23vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 5vh 2.5vw 0vh;
 
     .today-forecast-title {
       font-size: 10px;
-      color: black;
     }
 
     .today-forecast-details {
@@ -91,47 +124,78 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // gap: 1.5rem;
+
+        h3 {
+          font-size: 15px;
+
+        }
+
+        h4 {
+          font-size: 15px;
+          color: #F2F4FC;
+        }
       }
     }
   }
 
   .air-conditions {
-    background-color: rgb(180, 205, 255);
-    min-height: 30vh;
+    background-color: #232C3D;
+    height: 23vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 5vh 2.5vw;
 
     .air-conditions-title {
       font-size: 10px;
-      color: black;
+      color: #596476;
     }
 
     .air-conditions-details {
       display: grid;
-      grid-template-areas:
-        "a b"
-        "c d";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+
       justify-items: center;
       align-items: center;
-      gap: 3rem 0rem;
+      color: #F2F4FC;
     }
   }
 }
 
 .this-week {
-  width: 35vw;
-  background-color: brown;
+  background-color: #232C3D;
+  width: 32.5vw;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin: 5vh 2.5vw 5vh 0vw;
 
-  .week-forecast-children {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-items: center;
+  .this-week-title {
+    font-size: 10px;
+    color: #596476;
   }
 
+  .this-week-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #F2F4FC;
+
+
+    .week-forecast-children {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-items: center;
+      font-size: 10px;
+
+      h2 {
+        color: #596476;
+
+      }
+    }
+  }
 }
