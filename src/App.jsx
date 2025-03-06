@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchAPI } from "./utility/api";
-import "./App.scss";
-import { getTime } from "./utility/date";
+import "./styles/App.scss";
 import TodayForecast from "./components/TodayForecast";
 import AirConditions from "./components/AirConditions";
 import ThisWeek from "./components/ThisWeek";
 import Now from "./components/Now";
 import SearchInput from "./components/SearchInput";
+import Footer from "./components/footer";
 
 function App() {
   const [data, setData] = useState({});
@@ -42,19 +42,21 @@ function App() {
 
   return (
     <div className="app">
-      <div className="today">
-        <SearchInput inputRef={inputRef} handleSearch={handleSearch} />
-
-        <Now
-          dataLocation={data?.location}
-          dataCurrent={data?.current}
-          todayDate={data.forecast?.forecastday?.[0]?.day}
-        />
-        <TodayForecast todayHour={data?.forecast?.forecastday?.[0]?.hour} />
-        <AirConditions dataCurrent={data.current} />
+      <div className="header">
+        <div className="today">
+          <SearchInput inputRef={inputRef} handleSearch={handleSearch} />
+          <Now
+            dataLocation={data?.location}
+            dataCurrent={data?.current}
+            todayDate={data.forecast?.forecastday?.[0]?.day}
+          />
+          <TodayForecast todayHour={data?.forecast?.forecastday?.[0]?.hour} />
+          <AirConditions dataCurrent={data.current} />
+        </div>
+        <ThisWeek forecastDay={data?.forecast?.forecastday} />
       </div>
 
-      <ThisWeek forecastDay={data?.forecast?.forecastday} />
+      <Footer />
     </div>
   );
 }

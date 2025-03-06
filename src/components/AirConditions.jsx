@@ -1,3 +1,8 @@
+import { FaTemperatureHalf } from "react-icons/fa6";
+import { RiWaterPercentFill } from "react-icons/ri";
+import { GiPressureCooker } from "react-icons/gi";
+import { FaWind } from "react-icons/fa";
+
 const AirConditions = ({ dataCurrent }) => {
   return (
     <div className="air-conditions">
@@ -6,21 +11,39 @@ const AirConditions = ({ dataCurrent }) => {
       </div>
       <div className="air-conditions-details">
         <div className="real-feel">
-          <h2>Real Feel</h2>
-          <h3>{Math.round(dataCurrent?.feelslike_c)}°</h3>
+          <FaTemperatureHalf className="feel-icon" />
+          <div className="feel">
+            <h2>Real Feel</h2>
+            <h3>{Math.round(dataCurrent?.feelslike_c)}°</h3>
+          </div>
         </div>
-        <div className="Humidity">
-          <h2>Humidity</h2>
-          <h3>{Math.round(dataCurrent?.humidity)}%</h3>
+        <div className="humidity">
+          <RiWaterPercentFill className="humidity-icon" />
+          <div className="humid">
+            <h2>Humidity</h2>
+            <h3>{Math.round(dataCurrent?.humidity)}%</h3>
+          </div>
         </div>
-        <div className="Pressure">
-          <h2>Pressure</h2>
-          <h3>{dataCurrent?.pressure_mb} mbar</h3>
+        <div className="pressure">
+          <GiPressureCooker className="pressure-icon" />
+          <div className="press">
+            <h2>Pressure</h2>
+            <h3>{dataCurrent?.pressure_mb} mbar</h3>
+          </div>
         </div>
-        <div className="Wind">
-          <h2>Wind</h2>
-          <h3> {dataCurrent?.wind_kph} km/h</h3>
+        <div className="wind">
+          <FaWind className="wind-icon" />
+          <div className="windy">
+            <h2>Wind</h2>
+            <h3> {dataCurrent?.wind_kph} km/h</h3>
+          </div>
         </div>
+        {/* <div className="UV-index">
+        <div className="UV">
+          <h2>UV Index</h2>
+          <h3> {Math.round(dataCurrent?.uv)}</h3>
+        </div>
+        </div> */}
       </div>
     </div>
   );

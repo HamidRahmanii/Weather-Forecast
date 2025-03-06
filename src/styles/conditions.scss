@@ -1,0 +1,92 @@
+.air-conditions {
+    background-color: #232C3D;
+    height: 22vh;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 5vh 2.5vw 0vh;
+    border-radius: 15px;
+
+    .air-conditions-title {
+        font-size: 10px;
+        color: #596476;
+        height: 15%;
+        align-content: center;
+    }
+
+    .air-conditions-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem 2rem;
+        padding: 0 2rem;
+        align-items: center;
+        height: 80%;
+
+        .real-feel {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .feel-icon {
+                color: #8090a9;
+                align-self: center;
+                height: 30px;
+                width: auto;
+            }
+        }
+
+        .humidity {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .humidity-icon {
+                color: #8090a9;
+                align-self: center;
+                height: 30px;
+                width: auto;
+            }
+        }
+
+        .pressure {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .pressure-icon {
+                color: #8090a9;
+                align-self: center;
+                height: 30px;
+                width: auto;
+            }
+        }
+
+        .wind {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .wind-icon {
+                color: #8090a9;
+                align-self: center;
+                height: 30px;
+                width: auto;
+            }
+        }
+
+
+
+        h2 {
+            font-size: 14px;
+            color: #8090a9;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #F2F4FC;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: #060015;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+
+  .today {
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@import "./search.scss";
+@import "./now.scss";
+@import "./todayforecast.scss";
+@import "./conditions.scss";
+@import "./week.scss";
+@import "./footer.scss";

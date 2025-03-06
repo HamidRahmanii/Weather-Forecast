@@ -1,0 +1,66 @@
+.now {
+    color: #8090a9;
+    height: 21vh;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    margin: 5vh 2.5vw 0vh;
+
+    .city-region {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.25rem;
+
+        h2 {
+            font-size: 40px;
+            color: #F2F4FC;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    .now-details {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .city-conditions {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.25rem;
+
+            h3 {
+                font-size: 15px;
+            }
+        }
+
+        .city-temperature {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            color: #F2F4FC;
+        }
+
+        .city-icon {
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

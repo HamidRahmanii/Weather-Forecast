@@ -1,0 +1,21 @@
+.search-input {
+    height: 5vh;
+    min-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 2.5vw 0vh;
+
+    .input {
+        background-color: #232C3D;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 1rem;
+        color: #F2F4FC;
+        border-radius: 10px;
+
+        &::placeholder {
+            color: #596476;
+        }
+    }
+}

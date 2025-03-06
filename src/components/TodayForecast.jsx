@@ -8,7 +8,7 @@ const TodayForecast = ({ todayHour }) => {
       </div>
       <div className="today-forecast-details">
         {todayHour
-          ?.filter((_, index) => index >= 7 && (index - 7) % 3 === 0)
+          ?.filter((_, index) => index >= 6 && (index - 6) % 3 === 0)
           .map((hour, index) => (
             <div key={index} className="today-forecast-children">
               <h3>{getTime(hour.time)} </h3>
