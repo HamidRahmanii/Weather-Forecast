@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchAPI } from "./utility/api";
-
 import "./styles/App.scss";
 
 import TodayForecast from "./components/TodayForecast";
@@ -56,7 +55,6 @@ function App() {
         </div>
         <ThisWeek forecastDay={data?.forecast?.forecastday} />
       </div>
-
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@
     background-color: #232C3D;
     height: 22vh;
     min-height: 10rem;
+    min-width: 36rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,8 +21,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 1rem 4rem;
-        padding: 0 4rem;
+        gap: 1rem 2rem;
+        padding: 0 2rem;
         align-items: center;
         height: 80%;
 

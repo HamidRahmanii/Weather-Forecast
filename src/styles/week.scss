@@ -3,6 +3,7 @@
     width: 32.5vw;
     height: 85vh;
     min-height: 38rem;
+    min-width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,12 +20,10 @@
         display: flex;
         flex-direction: column;
         gap: 1.3rem;
-        color: #F2F4FC;
-
 
         .week-forecast-children {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 2fr 1fr);
             align-items: center;
             justify-items: center;
             font-size: 10px;
@@ -35,6 +34,10 @@
 
             h2 {
                 color: #8090a9;
+            }
+
+            h3 {
+                color: #F2F4FC;
             }
         }
     }
