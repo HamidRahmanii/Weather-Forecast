@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchAPI } from "./utility/api";
+
 import "./styles/App.scss";
+
 import TodayForecast from "./components/TodayForecast";
 import AirConditions from "./components/AirConditions";
 import ThisWeek from "./components/ThisWeek";
@@ -45,13 +47,12 @@ function App() {
       <div className="header">
         <div className="today">
           <SearchInput inputRef={inputRef} handleSearch={handleSearch} />
-          <Now
-            dataLocation={data?.location}
-            dataCurrent={data?.current}
+          <Now dataLocation={data?.location} dataCurrent={data?.current} />
+          <TodayForecast todayHour={data?.forecast?.forecastday?.[0]?.hour} />
+          <AirConditions
+            dataCurrent={data.current}
             todayDate={data.forecast?.forecastday?.[0]?.day}
           />
-          <TodayForecast todayHour={data?.forecast?.forecastday?.[0]?.hour} />
-          <AirConditions dataCurrent={data.current} />
         </div>
         <ThisWeek forecastDay={data?.forecast?.forecastday} />
       </div>
