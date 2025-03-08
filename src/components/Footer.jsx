@@ -1,9 +1,9 @@
-import { FaRegHeart } from "react-icons/fa";
+import "../styles/footer.scss";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <p className="footer-text">Made with ♥️ by Hamid Rahmani</p>
+      <h4 className="footer-text">Made with ♥️ by Hamid Rahmani</h4>
     </div>
   );
 };

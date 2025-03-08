@@ -1,3 +1,5 @@
+import "../styles/week.scss";
+
 const ThisWeek = ({ forecastDay }) => {
   const days = [
     "Sunday",
@@ -12,7 +14,7 @@ const ThisWeek = ({ forecastDay }) => {
   return (
     <div className="this-week">
       <div className="this-week-title">
-        <h2>7-DAY FORECAST</h2>
+        <h4>7-DAY FORECAST</h4>
       </div>
       <div className="this-week-details">
         {forecastDay?.map((item, index) => {
@@ -25,10 +27,10 @@ const ThisWeek = ({ forecastDay }) => {
 
           return (
             <div key={index} className="week-forecast-children">
-              <h2>{modifiedName}</h2>
+              <h4 className="week-names">{modifiedName}</h4>
               <img src={item?.day?.condition?.icon} />
-              <h3>{item?.day?.condition?.text}</h3>
-              <h2>{Math.round(item.day.avgtemp_c)}°</h2>
+              <h5>{item?.day?.condition?.text}</h5>
+              <h4 className="week-temps">{Math.round(item.day.avgtemp_c)}°</h4>
             </div>
           );
         })}

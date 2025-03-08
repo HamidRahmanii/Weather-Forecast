@@ -1,3 +1,5 @@
+import "../styles/search.scss";
+
 const SearchInput = ({ inputRef, handleSearch }) => {
   return (
     <form action="" onSubmit={handleSearch}>

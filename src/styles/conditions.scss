@@ -11,20 +11,23 @@
     border-radius: 15px;
 
     .air-conditions-title {
-        font-size: 10px;
-        color: #596476;
         height: 15%;
         align-content: center;
+
+        h4 {
+            color: #596476;
+            font-weight: 700; // Bold
+        }
     }
 
     .air-conditions-details {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 1rem 2rem;
+        gap: 0.5rem 2rem;
         padding: 0 2rem;
         align-items: center;
-        height: 80%;
+        height: 75%;
 
         .real-feel {
             display: flex;
@@ -104,14 +107,15 @@
             }
         }
 
-        h2 {
-            font-size: 14px;
-            color: #8090a9;
+        h3 {
+            color: #F2F4FC;
+            font-weight: 500; // Medium
         }
 
-        h3 {
-            font-size: 18px;
-            color: #F2F4FC;
+        h5 {
+            color: #8090a9;
+            font-weight: 500; // Medium
         }
+
     }
 }

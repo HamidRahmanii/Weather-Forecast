@@ -29,9 +29,37 @@ body {
   }
 }
 
-@import "./search.scss";
-@import "./now.scss";
-@import "./todayforecast.scss";
-@import "./conditions.scss";
-@import "./week.scss";
-@import "./footer.scss";
+
+
+// Define the font family and its variations
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Light.ttf') format('ttf'),
+    url('fonts/Rubik/Rubik-Light.woff') format('woff');
+  font-weight: 300; // Light
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Regular.ttf') format('ttf'),
+    url('fonts/Rubik/Rubik-Regular.woff') format('woff');
+  font-weight: 400; // Regular (normal)
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Medium.ttf') format('ttf'),
+    url('fonts/Rubik/Rubik-Medium.woff') format('woff');
+  font-weight: 500; // Medium
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik/Rubik-Bold.ttf') format('ttf'),
+    url('fonts/Rubik/Rubik-Bold.woff') format('woff');
+  font-weight: 700; // Bold
+  font-style: normal;
+}

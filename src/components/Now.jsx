@@ -1,15 +1,17 @@
+import "../styles/now.scss";
+
 const Now = ({ dataLocation, dataCurrent }) => {
   return (
     <div className="now">
       <div className="city-conditions">
         <div className="city-region">
-          <h2>{dataLocation?.name}</h2>
+          <h1>{dataLocation?.name}</h1>
           <h3>
             {dataLocation?.region}, {dataLocation?.country}
           </h3>
         </div>
         <div className="city-temperature">
-          <h3>{Math.round(dataCurrent?.temp_c)}°</h3>
+          <h1>{Math.round(dataCurrent?.temp_c)}°</h1>
         </div>
       </div>
       <div className="now-details">
@@ -19,7 +21,7 @@ const Now = ({ dataLocation, dataCurrent }) => {
             alt={dataCurrent?.condition?.text}
           />
         </div>
-        <h3>{dataCurrent?.condition?.text}</h3>
+        <h5>{dataCurrent?.condition?.text}</h5>
       </div>
     </div>
   );

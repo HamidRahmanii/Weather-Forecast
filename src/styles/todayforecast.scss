@@ -11,17 +11,21 @@
     border-radius: 15px;
 
     .today-forecast-title {
-        color: #596476;
-        font-size: 10px;
         height: 15%;
         align-content: center;
+
+        h4 {
+            color: #596476;
+            font-weight: 700; // Bold
+        }
     }
 
     .today-forecast-details {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        height: 80%;
+        justify-content: space-between;
+        height: 75%;
+        padding: 0 2rem;
 
         .today-forecast-children {
             height: 100%;
@@ -34,14 +38,14 @@
                 width: 60px;
             }
 
-            h3 {
-                color: #8090a9;
-                font-size: 15px;
+            h4 {
+                color: #F2F4FC;
+                font-weight: 500; // Medium
             }
 
-            h4 {
-                font-size: 15px;
-                color: #F2F4FC;
+            h5 {
+                color: #8090a9;
+                font-weight: 500; // Medium
             }
         }
     }

@@ -12,32 +12,45 @@
     border-radius: 15px;
 
     .this-week-title {
-        font-size: 10px;
-        color: #596476;
+        h4 {
+            color: #596476;
+            font-weight: 700; // Bold
+        }
     }
 
     .this-week-details {
         display: flex;
         flex-direction: column;
         gap: 1.3rem;
+        padding: 0 2rem;
 
         .week-forecast-children {
             display: grid;
-            grid-template-columns: repeat(2, 2fr 1fr);
+            // grid-template-columns: repeat(2, 2fr 1fr);
+            grid-template-columns: 2fr 1fr 2fr 1fr;
             align-items: center;
             justify-items: center;
-            font-size: 10px;
+
+            .week-names {
+                justify-self: start;
+            }
+
+            .week-temps {
+                justify-self: end;
+            }
 
             img {
                 width: 60px;
             }
 
-            h2 {
-                color: #8090a9;
+            h4 {
+                color: #F2F4FC;
+                font-weight: 400; // Regular (normal)  
             }
 
-            h3 {
-                color: #F2F4FC;
+            h5 {
+                color: #8090a9;
+                font-weight: 400; // Regular (normal)
             }
         }
     }
