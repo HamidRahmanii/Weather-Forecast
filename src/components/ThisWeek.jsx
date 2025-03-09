@@ -27,10 +27,10 @@ const ThisWeek = ({ forecastDay }) => {
 
           return (
             <div key={index} className="week-forecast-children">
-              <h4 className="week-names">{modifiedName}</h4>
+              <h5 className="week-names">{modifiedName}</h5>
               <img src={item?.day?.condition?.icon} />
-              <h5>{item?.day?.condition?.text}</h5>
-              <h4 className="week-temps">{Math.round(item.day.avgtemp_c)}°</h4>
+              <h6>{item?.day?.condition?.text}</h6>
+              <h5 className="week-temps">{Math.round(item.day.avgtemp_c)}°</h5>
             </div>
           );
         })}
