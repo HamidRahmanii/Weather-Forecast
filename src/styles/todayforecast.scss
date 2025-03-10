@@ -1,5 +1,5 @@
 .today-forecast {
-    background-color: #232C3D;
+    // background-color: #232C3D;
     height: 22vh;
     min-height: 10rem;
     min-width: 36rem;
@@ -33,9 +33,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            min-width: 75px;
+
 
             img {
-                width: 60px;
+                width: 50px;
             }
 
             h4 {

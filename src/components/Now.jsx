@@ -1,6 +1,7 @@
 import "../styles/now.scss";
+import { ColorExtractor } from "react-color-extractor";
 
-const Now = ({ dataLocation, dataCurrent }) => {
+const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
   return (
     <div className="now">
       <div className="city-conditions">
@@ -16,10 +17,12 @@ const Now = ({ dataLocation, dataCurrent }) => {
       </div>
       <div className="now-details">
         <div className="city-icon">
-          <img
-            src={dataCurrent?.condition?.icon}
-            alt={dataCurrent?.condition?.text}
-          />
+          <ColorExtractor getColors={(colors) => setColors(colors)}>
+            <img
+              src={dataCurrent?.condition?.icon}
+              alt={dataCurrent?.condition?.text}
+            />
+          </ColorExtractor>
         </div>
         <h5>{dataCurrent?.condition?.text}</h5>
       </div>

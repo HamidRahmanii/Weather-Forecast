@@ -1,18 +1,10 @@
 import "../styles/week.scss";
 
 const ThisWeek = ({ forecastDay }) => {
-  const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return (
-    <div className="this-week">
+    <div className="this-week bg-sky-950">
       <div className="this-week-title">
         <h4>7-DAY FORECAST</h4>
       </div>
@@ -22,8 +14,7 @@ const ThisWeek = ({ forecastDay }) => {
 
           const dayName = days[dayOfWeek];
 
-          const modifiedName =
-            index === 0 ? "Today" : index === 1 ? "Tomorrow" : dayName;
+          const modifiedName = index === 0 ? "Today" : dayName;
 
           return (
             <div key={index} className="week-forecast-children">

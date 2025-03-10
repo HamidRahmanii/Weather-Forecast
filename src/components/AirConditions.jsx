@@ -9,9 +9,9 @@ import "../styles/conditions.scss";
 
 const AirConditions = ({ dataCurrent, todayDate }) => {
   return (
-    <div className="air-conditions">
+    <div className="air-conditions bg-sky-950">
       <div className="air-conditions-title">
-        <h4>AIR CONDITIONS</h4>
+        <h4 className="!text-primary bg-primary">AIR CONDITIONS</h4>
       </div>
       <div className="air-conditions-details">
         <div className="real-feel">

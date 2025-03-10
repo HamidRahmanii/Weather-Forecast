@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 2.5vw 0vh;
+    height: 5vh;
+    min-height: 2rem;
+    width: auto;
+    justify-content: space-between;
+
+    .search {
+        width: 84%;
+
+        .search-input {
+
+            .input {
+                height: 5vh;
+                width: 100%;
+                // background-color: #232C3D;
+                outline: none;
+                border: none;
+                padding: 0 1rem;
+                color: #F2F4FC;
+                border-radius: 10px;
+
+                &::placeholder {
+                    color: #596476;
+                }
+            }
+        }
+    }
+
+    .theme-button {
+        width: 11.75%;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .dark {
+        background-color: aqua;
+    }
+
+    .light {
+        background-color: #596476;
+    }
+}
