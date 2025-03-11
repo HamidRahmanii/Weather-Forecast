@@ -11,6 +11,7 @@ import Footer from "./components/footer";
 
 function App() {
   const [data, setData] = useState({});
+  const [colors, setColors] = useState("#ffffff");
   const inputRef = useRef(null);
 
   const [theme, setTheme] = useState("dark");
@@ -56,8 +57,8 @@ function App() {
           <Now
             dataLocation={data?.location}
             dataCurrent={data?.current}
-            // colors={colors}
-            // setColors={setColors}
+            colors={colors}
+            setColors={setColors}
           />
           <TodayForecast todayHour={data?.forecast?.forecastday?.[0]?.hour} />
           <AirConditions

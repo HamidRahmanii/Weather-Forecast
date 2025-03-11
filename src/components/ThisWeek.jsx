@@ -6,7 +6,7 @@ const ThisWeek = ({ forecastDay }) => {
   return (
     <div className="this-week bg-sky-950">
       <div className="this-week-title">
-        <h4>7-DAY FORECAST</h4>
+        <h4>{forecastDay?.length}-DAY FORECAST</h4>
       </div>
       <div className="this-week-details">
         {forecastDay?.map((item, index) => {

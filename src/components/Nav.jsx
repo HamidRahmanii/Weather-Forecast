@@ -19,14 +19,14 @@ const Nav = ({ inputRef, handleSearch, theme, setTheme }) => {
           </div>
         </form>
       </div>
-      <div
+      {/* <div
         onClick={changeTheme}
         className={`theme-button bg-amber-600 ${
           theme === "dark" ? "dark" : "light"
         }`}
       >
         <button>{theme}</button>
-      </div>
+      </div> */}
     </div>
   );
 };

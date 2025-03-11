@@ -1,7 +1,19 @@
 import "../styles/now.scss";
-import { ColorExtractor } from "react-color-extractor";
+import { useEffect } from "react";
+import { extractColors } from "extract-colors";
 
 const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
+  useEffect(() => {
+    if (dataCurrent?.condition?.icon) {
+      extractColors(dataCurrent?.condition?.icon)
+        .then((colors) => {
+          console.log("colors", colors);
+          setColors(colors?.[0]?.hex);
+        })
+        .catch(console.error);
+    }
+  }, [dataCurrent]);
+
   return (
     <div className="now">
       <div className="city-conditions">
@@ -17,14 +29,12 @@ const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
       </div>
       <div className="now-details">
         <div className="city-icon">
-          <ColorExtractor getColors={(colors) => setColors(colors)}>
-            <img
-              src={dataCurrent?.condition?.icon}
-              alt={dataCurrent?.condition?.text}
-            />
-          </ColorExtractor>
+          <img
+            src={dataCurrent?.condition?.icon}
+            alt={dataCurrent?.condition?.text}
+          />
         </div>
-        <h5>{dataCurrent?.condition?.text}</h5>
+        <h5 style={{ color: colors }}>{dataCurrent?.condition?.text}</h5>
       </div>
     </div>
   );
