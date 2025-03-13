@@ -34,7 +34,7 @@ const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
             alt={dataCurrent?.condition?.text}
           />
         </div>
-        <h5 style={{ color: colors }}>{dataCurrent?.condition?.text}</h5>
+        <h6 style={{ color: colors }}>{dataCurrent?.condition?.text}</h6>
       </div>
     </div>
   );
