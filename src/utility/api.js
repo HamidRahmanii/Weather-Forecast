@@ -1,8 +1,6 @@
 import axios from "axios";
 const apiKey = import.meta.env.VITE_WEATHER_API;
 
-// const apiKey = "525c278831ce48b0922180156252402";
-
 const fetchAPI = axios.create({
   baseURL: `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&days=7&aqi=no&alerts=no`,
   headers: {

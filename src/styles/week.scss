@@ -1,19 +1,16 @@
 .this-week {
-    // background-color: #232C3D;
     width: 32.5vw;
     height: 85vh;
     min-height: 38rem;
     min-width: 20rem;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     padding: 1rem;
     margin: 5vh 2.5vw 0vh 0vw;
     border-radius: 15px;
 
     .this-week-title {
         h4 {
-            color: #596476;
             font-weight: 700; // Bold
         }
     }
@@ -44,13 +41,11 @@
             }
 
             h5 {
-                color: #F2F4FC;
                 font-weight: 500; // Medium  
                 font-size: 14px;
             }
 
             h6 {
-                color: #8090a9;
                 font-weight: 400; // Regular (normal)
                 font-size: 14px;
             }

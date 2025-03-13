@@ -1,8 +1,22 @@
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../components/themeSlice";
 import "../styles/nav.scss";
+import { useEffect } from "react";
 
-const Nav = ({ inputRef, handleSearch, theme, setTheme }) => {
+const Nav = ({ inputRef, handleSearch }) => {
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
   const changeTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    dispatch(toggleTheme());
   };
 
   return (
@@ -11,7 +25,7 @@ const Nav = ({ inputRef, handleSearch, theme, setTheme }) => {
         <form action="" onSubmit={handleSearch}>
           <div className="search-input">
             <input
-              className="input bg-sky-950"
+              className="input bg-sky-200 text-blue-800  dark:bg-sky-950 dark:text-blue-300"
               type="search"
               ref={inputRef}
               placeholder="Search for cities"
@@ -19,14 +33,12 @@ const Nav = ({ inputRef, handleSearch, theme, setTheme }) => {
           </div>
         </form>
       </div>
-      {/* <div
+      <div
         onClick={changeTheme}
-        className={`theme-button bg-amber-600 ${
-          theme === "dark" ? "dark" : "light"
-        }`}
+        className="theme-button bg-sky-200 dark:bg-sky-950"
       >
         <button>{theme}</button>
-      </div> */}
+      </div>
     </div>
   );
 };

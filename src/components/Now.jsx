@@ -18,12 +18,12 @@ const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
     <div className="now">
       <div className="city-conditions">
         <div className="city-region">
-          <h1>{dataLocation?.name}</h1>
-          <h3>
+          <h1 className="text-black dark:text-white">{dataLocation?.name}</h1>
+          <h3 className="text-blue-500">
             {dataLocation?.region}, {dataLocation?.country}
           </h3>
         </div>
-        <div className="city-temperature">
+        <div className="city-temperature text-black dark:text-white">
           <h1>{Math.round(dataCurrent?.temp_c)}°</h1>
         </div>
       </div>

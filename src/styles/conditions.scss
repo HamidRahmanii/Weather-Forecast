@@ -1,5 +1,4 @@
 .air-conditions {
-    // background-color: #232C3D;
     height: 22vh;
     min-height: 10rem;
     min-width: 36rem;
@@ -15,7 +14,6 @@
         align-content: center;
 
         h4 {
-            // color: #596476;
             font-weight: 700; // Bold
         }
     }
@@ -35,7 +33,6 @@
             gap: 0.5rem;
 
             .feel-icon {
-                color: #8090a9;
                 align-self: center;
                 height: 30px;
                 width: auto;
@@ -48,7 +45,6 @@
             gap: 0.5rem;
 
             .rain-icon {
-                color: #8090a9;
                 align-self: center;
                 height: 30px;
                 width: auto;
@@ -61,7 +57,6 @@
             gap: 0.5rem;
 
             .humidity-icon {
-                color: #8090a9;
                 align-self: center;
                 height: 30px;
                 width: auto;
@@ -74,7 +69,6 @@
             gap: 0.5rem;
 
             .wind-icon {
-                color: #8090a9;
                 align-self: center;
                 height: 30px;
                 width: auto;
@@ -87,7 +81,6 @@
             gap: 0.5rem;
 
             .pressure-icon {
-                color: #8090a9;
                 align-self: center;
                 height: 30px;
                 width: auto;
@@ -100,7 +93,6 @@
             gap: 0.5rem;
 
             .uv-icon {
-                color: #8090a9;
                 align-self: center;
                 height: 30px;
                 width: auto;
@@ -108,12 +100,10 @@
         }
 
         h3 {
-            color: #F2F4FC;
             font-weight: 500; // Medium
         }
 
         h5 {
-            color: #8090a9;
             font-weight: 500; // Medium
         }
 

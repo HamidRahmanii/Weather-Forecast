@@ -8,15 +8,19 @@ import TodayForecast from "./components/TodayForecast";
 import AirConditions from "./components/AirConditions";
 import ThisWeek from "./components/ThisWeek";
 import Footer from "./components/footer";
+import mockData from "./utility/mockData";
 
 function App() {
   const [data, setData] = useState({});
   const [colors, setColors] = useState("#ffffff");
   const inputRef = useRef(null);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const [theme, setTheme] = useState("dark");
 
   const getCityWeather = (city) => {
+    setIsLoading(true);
     fetchAPI
       .get("/", {
         params: {
@@ -29,7 +33,9 @@ function App() {
       })
       .catch((err) => {
         console.log("error", err);
-      });
+        setData(mockData);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const handleSearch = (e) => {
@@ -44,8 +50,11 @@ function App() {
     getCityWeather("qom");
   }, []);
 
+  // if (isLoading)
+  //   return <div className="bg-red-500">Loading: {isLoading && "hast"}</div>;
+
   return (
-    <div className="app">
+    <div className="app bg-white dark:bg-black">
       <div className="header">
         <div className="today">
           <Nav
