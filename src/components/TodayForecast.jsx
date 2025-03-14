@@ -2,7 +2,7 @@
 import { getTime } from "../utility/date";
 
 // Import styles
-import "../styles/todayforecast.scss";
+import "../styles/todayForecast.scss";
 
 // TodayForecast component
 const TodayForecast = ({ todayHour }) => {

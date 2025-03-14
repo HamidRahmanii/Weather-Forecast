@@ -1,10 +1,11 @@
 // Import hooks and dependencies
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "../components/themeSlice";
+import { toggleTheme } from "../app/store/slice/themeSlice";
 import { useEffect } from "react";
 
 // Import styles
 import "../styles/nav.scss";
+import ToggleButton from "./toggleButton";
 
 // Nav component
 const Nav = ({ inputRef, handleSearch }) => {
@@ -42,12 +43,7 @@ const Nav = ({ inputRef, handleSearch }) => {
       </div>
 
       {/* Theme toggle button */}
-      <div
-        onClick={changeTheme}
-        className="theme-button bg-sky-200 dark:bg-sky-950"
-      >
-        <button>{theme}</button>
-      </div>
+      <ToggleButton className="theme-button bg-sky-200 dark:bg-sky-950" />
     </div>
   );
 };

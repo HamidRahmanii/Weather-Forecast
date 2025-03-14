@@ -2,7 +2,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // Import theme reducer
-import themeReducer from "../components/themeSlice";
+import themeReducer from "./slice/themeSlice";
 
 // Create Redux store
 const store = configureStore({
