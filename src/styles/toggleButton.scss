@@ -33,7 +33,7 @@ body.dark .support a {
     background-color: #111;
     width: 70px;
     height: 38px;
-    border-radius: 50px;
+    border-radius: 19px;
     position: relative;
     padding: 10px;
     cursor: pointer;
@@ -53,13 +53,13 @@ body.dark .support a {
 }
 
 .fa-moon {
-    color: #0080ff;
+    color: #0066ff;
     font-size: 18px;
 }
 
 
 .checkbox-label .ball {
-    background-color: #8c8c8c;
+    // background-color: #999999;
     width: 32px;
     height: 32px;
     position: absolute;
