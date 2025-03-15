@@ -7,7 +7,7 @@ import { toggleTheme } from "../redux/themeSlice/themeSlice";
 
 const ToggleButton = () => {
   const dispatch = useDispatch();
-  const theme = useSelector((state) => state.theme);
+  // const theme = useSelector((state) => state.theme);
 
   // Toggle theme between light and dark
   const changeTheme = () => {

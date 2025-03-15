@@ -44,7 +44,12 @@ const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
             alt={dataCurrent?.condition?.text}
           />
         </div>
-        <h6 style={{ color: colors }}>{dataCurrent?.condition?.text}</h6>
+        <h6
+          className="drop-shadow-sm dark:drop-shadow-none"
+          style={{ color: colors }}
+        >
+          {dataCurrent?.condition?.text}
+        </h6>
       </div>
     </div>
   );
