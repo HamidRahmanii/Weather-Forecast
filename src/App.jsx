@@ -34,7 +34,7 @@ function App() {
       })
       .then((res) => {
         setData(res.data); // Set weather data
-        inputRef.current.value = ""; // Clear input field
+        inputRef.current.value = ""; // Clear input field j
       })
       .catch((err) => {
         console.log("error", err); // Log error

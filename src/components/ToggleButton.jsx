@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import "../styles/toggleButton.scss";
 import { FaMoon, FaSun } from "react-icons/fa6";
-import { toggleTheme } from "../app/store/slice/themeSlice";
+import { toggleTheme } from "../redux/themeSlice/themeSlice";
 
 const ToggleButton = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 // Import hooks and dependencies
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "../app/store/slice/themeSlice";
+import { toggleTheme } from "../redux/themeSlice/themeSlice";
 import { useEffect } from "react";
 
 // Import styles
@@ -33,7 +33,7 @@ const Nav = ({ inputRef, handleSearch }) => {
         <form action="" onSubmit={handleSearch}>
           <div className="search-input">
             <input
-              className="input bg-sky-200 text-blue-800 dark:bg-sky-950 dark:text-blue-300"
+              className="input bg-sky-100 text-blue-700 dark:bg-sky-950 dark:text-blue-300 shadow-lg dark:shadow-none"
               type="search"
               ref={inputRef}
               placeholder="Search for cities"
@@ -43,7 +43,7 @@ const Nav = ({ inputRef, handleSearch }) => {
       </div>
 
       {/* Theme toggle button */}
-      <ToggleButton className="theme-button bg-sky-200 dark:bg-sky-950" />
+      <ToggleButton />
     </div>
   );
 };
