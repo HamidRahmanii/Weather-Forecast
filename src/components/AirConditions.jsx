@@ -14,7 +14,7 @@ const AirConditions = ({ dataCurrent, todayDate }) => {
   return (
     <div className="air-conditions bg-sky-100 dark:bg-sky-950 shadow-lg dark:shadow-none">
       {/* Title section */}
-      <div className="air-conditions-title text-blue-400 dark:text-sky-600">
+      <div className="air-conditions-title text-blue-400 dark:text-sky-700">
         <h4 className="!text-primary bg-primary">AIR CONDITIONS</h4>
       </div>
 
