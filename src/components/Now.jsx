@@ -38,7 +38,7 @@ const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
 
       {/* Weather condition icon and text */}
       <div className="now-details">
-        <div className="city-icon">
+        <div className="city-icon drop-shadow-sm">
           <img
             src={dataCurrent?.condition?.icon}
             alt={dataCurrent?.condition?.text}
