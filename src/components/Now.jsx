@@ -12,7 +12,7 @@ const Now = ({ dataLocation, dataCurrent, colors, setColors }) => {
     if (dataCurrent?.condition?.icon) {
       extractColors(dataCurrent?.condition?.icon)
         .then((colors) => {
-          console.log("colors", colors); // Log extracted colors
+          "colors", colors; // Log extracted colors
           setColors(colors?.[0]?.hex); // Set the primary color
         })
         .catch(console.error); // Handle errors

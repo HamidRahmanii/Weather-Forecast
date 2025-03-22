@@ -14,6 +14,8 @@ import ThisWeek from "./components/ThisWeek";
 import Footer from "./components/Footer";
 import mockData from "./utility/mockData";
 
+import { useSearchParams } from "react-router";
+
 // App component
 function App() {
   // State for weather data, colors, loading status, and theme
@@ -22,6 +24,8 @@ function App() {
   const inputRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [theme, setTheme] = useState("dark");
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   // Fetch weather data for a given city
   const getCityWeather = (city) => {
@@ -37,7 +41,7 @@ function App() {
         inputRef.current.value = ""; // Clear input field j
       })
       .catch((err) => {
-        console.log("error", err); // Log error
+        console.error("error", err); // Log error
         setData(mockData); // Fallback to mock data
       })
       .finally(() => setIsLoading(false)); // Reset loading state
@@ -48,14 +52,13 @@ function App() {
     e.preventDefault();
     const city = inputRef.current.value; // Get city from input
     getCityWeather(city); // Fetch weather data
+    setSearchParams({ q: city });
   };
-
-  // Log weather data for debugging
-  console.log("data", data);
 
   // Fetch weather data for default city on component mount
   useEffect(() => {
-    getCityWeather("qom"); // Default city
+    const getCity = searchParams.get("q") ?? "qom";
+    getCityWeather(getCity); // Default city
   }, []);
 
   // Render loading state (commented out for now)

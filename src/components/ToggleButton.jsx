@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import "../styles/toggleButton.scss";
@@ -23,8 +23,8 @@ const ToggleButton = () => {
         id="checkbox"
       />
       <label for="checkbox" className="checkbox-label">
-        <FaMoon className="fa-moon" />
         <FaSun className="fa-sun" />
+        <FaMoon className="fa-moon" />
         <span className="ball  bg-sky-500"></span>
       </label>
     </div>

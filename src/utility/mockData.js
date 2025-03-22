@@ -1,6 +1,6 @@
 export default {
   location: {
-    name: "Qom",
+    name: "Qom Test",
     region: "Qom",
     country: "Iran",
     lat: 34.6401,

@@ -11,14 +11,12 @@ const ThisWeek = ({ forecastDay }) => {
 
   // Get the current theme from Redux store
   const theme = useSelector((state) => state.theme);
-
   return (
     <div className="this-week bg-sky-100 dark:bg-sky-950 shadow-lg dark:shadow-none">
       {/* Title for the forecast section */}
       <div className="this-week-title text-blue-400 dark:text-sky-700">
         <h4>{forecastDay?.length}-DAY FORECAST</h4>
       </div>
-
       {/* Forecast details */}
       <div className="this-week-details">
         {forecastDay?.map((item, index) => {
