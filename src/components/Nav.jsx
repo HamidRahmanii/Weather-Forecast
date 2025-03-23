@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 // Import styles
 import "../styles/nav.scss";
-import ToggleButton from "./toggleButton";
+import ToggleButton from "./ToggleButton";
 
 // Nav component
 const Nav = ({ inputRef, handleSearch }) => {
