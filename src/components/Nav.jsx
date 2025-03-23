@@ -13,6 +13,7 @@ const Nav = ({ inputRef, handleSearch }) => {
   const theme = useSelector((state) => state.theme);
 
   // Update the HTML class based on the current theme
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
